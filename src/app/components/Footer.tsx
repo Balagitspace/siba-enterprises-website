@@ -64,11 +64,11 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3 text-sm">
                 <Mail className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" />
-                <span className="text-slate-400">info@sibaenterprises.com</span>
+                <span className="text-slate-400">sibaexports07@gmail.com</span>
               </li>
               <li className="flex items-start space-x-3 text-sm">
                 <Phone className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" />
-                <span className="text-slate-400">+91 XXXXX XXXXX</span>
+                <span className="text-slate-400">+91 76250 31263</span>
               </li>
               <li className="flex items-start space-x-3 text-sm">
                 <MapPin className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" />
@@ -78,17 +78,17 @@ export function Footer() {
 
             {/* Social Media */}
             <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-slate-400 hover:text-[#D4A574] transition-colors">
+              <a href="https://www.facebook.com/SibaEnterprise/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#D4A574] transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-[#D4A574] transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-slate-400 hover:text-[#D4A574] transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-slate-400 hover:text-[#D4A574] transition-colors">
+              <a href="https://www.instagram.com/siba_enterprises/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#D4A574] transition-colors">
                 <Instagram className="w-5 h-5" />
+              </a>
+              <a href="https://wa.me/+917625031263" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#D4A574] transition-colors">
+                <Phone className="w-5 h-5" />
+              </a>
+              <a href="https://linkedin.com/company/sibaenterprises" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#D4A574] transition-colors">
+                <Linkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
