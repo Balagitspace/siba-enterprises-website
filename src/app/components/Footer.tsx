@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, Facebook, Twitter, Linkedin, Instagram, MessageCircle } from "lucide-react";
 import logo from "../../assets/f3f3fb3f9f221831ccb7b6e090ff386be0f3a342.png";
 
 export function Footer() {
@@ -85,7 +85,7 @@ export function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
               <a href="https://wa.me/+917625031263" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#D4A574] transition-colors">
-                <Phone className="w-5 h-5" />
+                <MessageCircle className="w-5 h-5" />
               </a>
               <a href="https://linkedin.com/company/sibaenterprises" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#D4A574] transition-colors">
                 <Linkedin className="w-5 h-5" />
