@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Mail, Phone, Facebook, Twitter, Linkedin, Instagram, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, MessageCircle } from "lucide-react";
 import logo from "../../assets/f3f3fb3f9f221831ccb7b6e090ff386be0f3a342.png";
 
 export function Footer() {
@@ -72,7 +72,7 @@ export function Footer() {
               </li>
               <li className="flex items-start space-x-3 text-sm">
                 <MapPin className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" />
-                <span className="text-slate-400">India</span>
+                <span className="text-slate-400">Sankarankovil, Tamil Nadu, India - 627756</span>
               </li>
             </ul>
 
