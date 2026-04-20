@@ -40,7 +40,7 @@ export function Contact() {
   };
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "91XXXXXXXXXX";
+    const phoneNumber = "917625031263";
     const message = encodeURIComponent("Hello, I'm interested in your export products.");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
   };

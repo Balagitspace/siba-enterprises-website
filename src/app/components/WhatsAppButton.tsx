@@ -2,8 +2,7 @@ import { MessageCircle } from "lucide-react";
 
 export function WhatsAppButton() {
   const handleWhatsAppClick = () => {
-    // Replace with actual WhatsApp Business number
-    const phoneNumber = "91XXXXXXXXXX"; // Format: country code + number without +
+    const phoneNumber = "917625031263"; // Format: country code + number without +
     const message = encodeURIComponent("Hello, I'm interested in your export products.");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
   };
