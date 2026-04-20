@@ -368,6 +368,48 @@ export function Home() {
         </div>
       </section>
 
+      {/* Quality Assurance Feature Block */}
+      <section className="py-16 sm:py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#8B3A4A]/10 text-[#8B3A4A] mb-6">
+                <CheckCircle className="w-6 h-6" />
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+                Stringent Quality Assurance
+              </h2>
+              <p className="text-slate-600 mb-8">
+                Our quality assurance process ensures that every product meets international standards before it reaches your market.
+              </p>
+
+              <div className="space-y-4">
+                <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <h3 className="font-semibold text-slate-900 mb-2">Supplier Verification</h3>
+                  <p className="text-slate-600 text-sm">All manufacturing partners undergo rigorous audits and certifications.</p>
+                </div>
+                <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <h3 className="font-semibold text-slate-900 mb-2">Raw Material Inspection</h3>
+                  <p className="text-slate-600 text-sm">Quality checks begin at the raw material stage to ensure purity and grade.</p>
+                </div>
+                <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <h3 className="font-semibold text-slate-900 mb-2">Final Product Testing</h3>
+                  <p className="text-slate-600 text-sm">Comprehensive testing for quality, durability, and compliance before shipment.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-3xl overflow-hidden shadow-xl">
+              <ImageWithFallback
+                src="https://images.unsplash.com/photo-1581093588401-9aa51f5df0df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxxdWFsaXR5JTIwY29udHJvbHN8ZW58MHx8fHwxNzc1NjI5ODQ0fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Quality assurance inspection"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 sm:py-20 bg-gradient-to-r from-[#D4A574] to-[#C49564] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
