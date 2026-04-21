@@ -88,7 +88,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Email</h3>
-                    <p className="text-slate-600">sibaexports07@gmail.com</p>
+                    <p className="text-slate-600">balashiva0720@gmail.com</p>
                   </div>
                 </div>
 
@@ -109,7 +109,8 @@ export function Contact() {
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Address</h3>
                     <p className="text-slate-600">
-                      Sankarankovil, Tamil Nadu, India - 627756
+                      Sankarankovil<br />
+                      Tamil Nadu, India - 627756
                     </p>
                   </div>
                 </div>
@@ -270,18 +271,13 @@ export function Contact() {
             </p>
           </div>
           
-          {/* Google Maps Embed */}
-          <div className="bg-white rounded-lg overflow-hidden shadow-md h-96">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.123456789012!2d77.5351242!3d9.1777966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0697eb07d96005%3A0x3d454d43a9559d3d!2sSankarankovil%2C%20Tamil%20Nadu%20627756%2C%20India!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Siba Enterprises Location - Sankarankovil, Tamil Nadu"
-            ></iframe>
+          {/* Map Placeholder */}
+          <div className="bg-slate-200 rounded-lg overflow-hidden shadow-md h-96 flex items-center justify-center">
+            <div className="text-center">
+              <MapPin className="w-16 h-16 text-slate-400 mx-auto mb-4" />
+              <p className="text-slate-600 font-semibold">Map Location</p>
+              <p className="text-sm text-slate-500">Replace with actual Google Maps embed</p>
+            </div>
           </div>
         </div>
       </section>
