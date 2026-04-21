@@ -14,9 +14,7 @@ export function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Mock form submission
-    console.log("Form submitted:", formData);
+    // Let Netlify handle the form submission
     setSubmitted(true);
     
     // Reset form after 3 seconds
@@ -150,7 +148,18 @@ export function Contact() {
                     <p className="text-sm">We'll get back to you within 24 hours.</p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form 
+                    name="contact" 
+                    method="POST" 
+                    data-netlify="true" 
+                    data-netlify-honeypot="bot-field"
+                    onSubmit={handleSubmit} 
+                    className="space-y-6"
+                  >
+                    <input type="hidden" name="form-name" value="contact" />
+                    <div style={{display: 'none'}}>
+                      <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </div>
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
