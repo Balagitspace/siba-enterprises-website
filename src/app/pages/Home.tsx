@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { ArrowRight, CheckCircle, Shield, TrendingUp, Clock, Package, Users, Award, Truck, Factory, FileCheck } from "lucide-react";
+import { ArrowRight, CheckCircle, Globe2, Shield, TrendingUp, Clock, Package, Users, Award, Truck, Factory, FileCheck } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 export function Home() {
@@ -93,6 +93,11 @@ export function Home() {
     "Payment Terms: LC, TT, and negotiable terms",
     "Sample Availability: Product samples available on request",
     "Lead Time: 2-4 weeks from order confirmation",
+  ];
+
+  const countries = [
+    "United States", "United Kingdom", "Germany", "France", "Canada",
+    "Australia", "UAE", "Singapore", "Japan", "South Korea"
   ];
 
   return (
@@ -368,13 +373,81 @@ export function Home() {
         </div>
       </section>
 
+      {/* Global Reach */}
+      <section className="py-16 sm:py-20 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Globe2 className="w-16 h-16 text-[#D4A574] mx-auto mb-4" />
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Our Global Reach
+            </h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Successfully exporting to major markets worldwide
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {countries.map((country, index) => (
+              <div
+                key={index}
+                className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-sm"
+              >
+                {country}
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1733195296321-b99d129b09cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMG1hcCUyMGdsb2JhbCUyMG5ldHdvcmslMjBjb25uZWN0aXZpdHklMjBidXNpbmVzc3xlbnwxfHx8fDE3NzU2Mjg4NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              alt="Global network"
+              className="rounded-lg mx-auto max-w-4xl opacity-80"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 sm:py-20 bg-gradient-to-r from-[#D4A574] to-[#C49564] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Start Your Import Journey with Us
           </h2>
-          <p className="text-lg text-white/90 mb-8">
+          <p className="text-lg text-whit
+      {/* Global Reach */}
+      <section className="py-16 sm:py-20 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Globe2 className="w-16 h-16 text-[#D4A574] mx-auto mb-4" />
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Our Global Reach
+            </h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Successfully exporting to major markets worldwide
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {countries.map((country, index) => (
+              <div
+                key={index}
+                className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-sm"
+              >
+                {country}
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1733195296321-b99d129b09cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMG1hcCUyMGdsb2JhbCUyMG5ldHdvcmslMjBjb25uZWN0aXZpdHklMjBidXNpbmVzc3xlbnwxfHx8fDE3NzU2Mjg4NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              alt="Global network"
+              className="rounded-lg mx-auto max-w-4xl opacity-80"
+            />
+          </div>
+        </div>
+      </section>
+e/90 mb-8">
             Partner with SIBA ENTERPRISES for reliable, quality-focused export solutions
           </p>
           <Link
@@ -382,9 +455,113 @@ export function Home() {
             className="inline-flex items-center px-8 py-4 bg-white text-[#8B3A4A] rounded-lg hover:bg-slate-50 transition-all shadow-lg hover:shadow-xl gap-2 font-semibold"
           >
             Get Quote Now <ArrowRight className="w-5 h-5" />
-          </Link>
+ whit
+      {/* Global Reach */}
+      <section className="py-16 sm:py-20 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Globe2 className="w-16 h-16 text-[#D4A574] mx-auto mb-4" />
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Our Global Reach
+            </h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Successfully exporting to major markets worldwide
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {countries.map((country, index) => (
+              <div
+                key={index}
+                className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-sm"
+              >
+                {country}
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1733195296321-b99d129b09cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMG1hcCUyMGdsb2JhbCUyMG5ldHdvcmslMjBjb25uZWN0aXZpdHklMjBidXNpbmVzc3xlbnwxfHx8fDE3NzU2Mjg4NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              alt="Global network"
+              className="rounded-lg mx-auto max-w-4xl opacity-80"
+            />
+          </div>
+        </div>
+      </section>
+e/90 mb-8">
         </div>
       </section>
     </div>
   );
 }
+whit
+{/* Global Reach */}
+      <section className="py-16 sm:py-20 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Globe2 className="w-16 h-16 text-[#D4A574] mx-auto mb-4" />
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Our Global Reach
+            </h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Successfully exporting to major markets worldwide
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {countries.map((country, index) => (
+              <div
+                key={index}
+                className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-sm"
+              >
+                {country}
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1733195296321-b99d129b09cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMG1hcCUyMGdsb2JhbCUyMG5ldHdvcmslMjBjb25uZWN0aXZpdHklMjBidXNpbmVzc3xlbnwxfHx8fDE3NzU2Mjg4NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              alt="Global network"
+              className="rounded-lg mx-auto max-w-4xl opacity-80"
+            />
+          </div>
+        </div>
+      </section>
+e/90 mb-8">
+whit
+{/* Global Reach */}
+      <section className="py-16 sm:py-20 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Globe2 className="w-16 h-16 text-[#D4A574] mx-auto mb-4" />
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Our Global Reach
+            </h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Successfully exporting to major markets worldwide
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {countries.map((country, index) => (
+              <div
+                key={index}
+                className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-sm"
+              >
+                {country}
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1733195296321-b99d129b09cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMG1hcCUyMGdsb2JhbCUyMG5ldHdvcmslMjBjb25uZWN0aXZpdHklMjBidXNpbmVzc3xlbnwxfHx8fDE3NzU2Mjg4NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              alt="Global network"
+              className="rounded-lg mx-auto max-w-4xl opacity-80"
+            />
+          </div>
+        </div>
+      </section>
+e/90 mb-8">

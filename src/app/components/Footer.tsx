@@ -1,6 +1,6 @@
 import { Link } from "react-router";
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-import logo from "figma:asset/f3f3fb3f9f221831ccb7b6e090ff386be0f3a342.png";
+import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram, WhatsApp } from "lucide-react";
+import logo from "../../assets/f3f3fb3f9f221831ccb7b6e090ff386be0f3a342.png";
 
 export function Footer() {
   return (
@@ -10,9 +10,9 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <img src={logo} alt="SIBA ENTERPRISES" className="h-10 w-auto" />
+              <img src={logo} alt="SIBA ENTERPRISES" className="h-12 w-auto" />
               <div>
-                <h3 className="font-bold text-lg">SIBA ENTERPRISES</h3>
+                <h3 className="text-xl font-bold text-white">SIBA ENTERPRISES</h3>
                 <p className="text-xs text-[#D4A574]">Excellence in Exports</p>
               </div>
             </div>
@@ -77,15 +77,12 @@ export function Footer() {
             </ul>
 
             {/* Social Media */}
-            <div className="flex space-x-4 mt-6">
+            <div className="flex items-center space-x-4 mt-6">
               <a href="https://wa.me/+917625031263" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#D4A574] transition-colors">
-                <MessageCircle className="w-5 h-5" />
+                <WhatsApp className="w-5 h-5" />
               </a>
               <a href="#" className="text-slate-400 hover:text-[#D4A574] transition-colors">
                 <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-slate-400 hover:text-[#D4A574] transition-colors">
-                <Twitter className="w-5 h-5" />
               </a>
               <a href="#" className="text-slate-400 hover:text-[#D4A574] transition-colors">
                 <Linkedin className="w-5 h-5" />
