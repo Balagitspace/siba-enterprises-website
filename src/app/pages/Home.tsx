@@ -7,7 +7,7 @@ export function Home() {
     {
       title: "Pure Cotton Towels",
       description: "Premium quality cotton towels in various sizes, perfect for hotels, spas, and retail.",
-      image: "https://images.unsplash.com/photo-1667235195726-a7c440bca9bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aGl0ZSUyMGJhdGglMjB0b3dlbHMlMjBzdGFja2VkJTIwaG90ZWwlMjBzcGElMjBsdXh1cnl8ZW58MXx8fHwxNzc1NjI5NzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://i.pinimg.com/1200x/49/03/3e/49033eeec34c6e66eae80cd53271a0d6.jpg",
     },
     {
       title: "Pure Cotton Handkerchiefs",
@@ -17,7 +17,7 @@ export function Home() {
     {
       title: "Premium Incense Sticks",
       description: "Aromatic incense sticks crafted with natural ingredients for a soothing experience.",
-      image: "https://images.unsplash.com/photo-1682490319533-77f69e486c9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBpbmNlbnNlJTIwc3RpY2tzJTIwYWdhcmJhdHRpJTIwdHJhZGl0aW9uYWwlMjBzcGlyaXR1YWx8ZW58MXx8fHwxNzc1NjI5NzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://i.pinimg.com/1200x/85/bb/6b/85bb6b1a7b4f7f791aead5cac31668fe.jpg",
     },
   ];
 
@@ -373,40 +373,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* Global Reach */}
-      <section className="py-16 sm:py-20 bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <Globe2 className="w-16 h-16 text-[#D4A574] mx-auto mb-4" />
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Our Global Reach
-            </h2>
-            <p className="text-slate-300 max-w-2xl mx-auto">
-              Successfully exporting to major markets worldwide
-            </p>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {countries.map((country, index) => (
-              <div
-                key={index}
-                className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-sm"
-              >
-                {country}
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <ImageWithFallback
-              src="https://images.unsplash.com/photo-1733195296321-b99d129b09cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMG1hcCUyMGdsb2JhbCUyMG5ldHdvcmslMjBjb25uZWN0aXZpdHklMjBidXNpbmVzc3xlbnwxfHx8fDE3NzU2Mjg4NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
-              alt="Global network"
-              className="rounded-lg mx-auto max-w-4xl opacity-80"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 sm:py-20 bg-gradient-to-r from-[#D4A574] to-[#C49564] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -422,40 +388,6 @@ export function Home() {
           >
             Contact Us
           </a>
-        </div>
-      </section>
-
-      {/* Global Reach */}
-      <section className="py-16 sm:py-20 bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <Globe2 className="w-16 h-16 text-[#D4A574] mx-auto mb-4" />
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Our Global Reach
-            </h2>
-            <p className="text-slate-300 max-w-2xl mx-auto">
-              Successfully exporting to major markets worldwide
-            </p>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {countries.map((country, index) => (
-              <div
-                key={index}
-                className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-sm"
-              >
-                {country}
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <ImageWithFallback
-              src="https://images.unsplash.com/photo-1733195296321-b99d129b09cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMG1hcCUyMGdsb2JhbCUyMG5ldHdvcmslMjBjb25uZWN0aXZpdHklMjBidXNpbmVzc3xlbnwxfHx8fDE3NzU2Mjg4NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
-              alt="Global network"
-              className="rounded-lg mx-auto max-w-4xl opacity-80"
-            />
-          </div>
         </div>
       </section>
     </div>

@@ -86,7 +86,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Email</h3>
-                    <p className="text-slate-600">balashiva0720@gmail.com</p>
+                    <p className="text-slate-600">sibaexports07@gmail.com</p>
                   </div>
                 </div>
 
@@ -107,8 +107,7 @@ export function Contact() {
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Address</h3>
                     <p className="text-slate-600">
-                      Sankarankovil<br />
-                      Tamil Nadu, India - 627756
+                      Sankarankovil, Tenkasi, India - 627756
                     </p>
                   </div>
                 </div>
