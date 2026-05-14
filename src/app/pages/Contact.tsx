@@ -279,13 +279,18 @@ export function Contact() {
             </p>
           </div>
           
-          {/* Map Placeholder */}
-          <div className="bg-slate-200 rounded-lg overflow-hidden shadow-md h-96 flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="w-16 h-16 text-slate-400 mx-auto mb-4" />
-              <p className="text-slate-600 font-semibold">Map Location</p>
-              <p className="text-sm text-slate-500">Replace with actual Google Maps embed</p>
-            </div>
+          {/* Map */}
+          <div className="rounded-lg overflow-hidden shadow-md h-96">
+            <iframe
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              style={{ border: 0 }}
+              src="https://maps.google.com/maps?q=Sankarankovil%20Tenkasi%20Tamil%20Nadu&output=embed"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </section>

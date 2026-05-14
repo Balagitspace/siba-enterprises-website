@@ -12,7 +12,7 @@ export function Home() {
     {
       title: "Pure Cotton Handkerchiefs",
       description: "Soft, durable handkerchiefs made from 100% pure cotton with excellent absorbency.",
-      image: "https://images.unsplash.com/photo-1655151865449-7f4a154f84db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb2xkZWQlMjB3aGl0ZSUyMGhhbmRrZXJjaGllZiUyMGNvdHRvbiUyMGZhYnJpYyUyMHRleHRpbGV8ZW58MXx8fHwxNzc1NjI5NzExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://i.pinimg.com/1200x/92/17/4a/92174a6df09ae1137f7cebdac27692c9.jpg",
     },
     {
       title: "Premium Incense Sticks",

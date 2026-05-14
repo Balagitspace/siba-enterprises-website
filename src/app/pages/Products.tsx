@@ -6,7 +6,7 @@ export function Products() {
   const products = [
     {
       title: "Pure Cotton Towels",
-      image: "https://images.unsplash.com/photo-1667235195726-a7c440bca9bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aGl0ZSUyMGJhdGglMjB0b3dlbHMlMjBzdGFja2VkJTIwaG90ZWwlMjBzcGElMjBsdXh1cnl8ZW58MXx8fHwxNzc1NjI5NzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://i.pinimg.com/1200x/49/03/3e/49033eeec34c6e66eae80cd53271a0d6.jpg",
       description: "Premium quality pure cotton towels perfect for hotels, spas, resorts, and retail markets. Our towels are known for their exceptional softness, durability, and superior absorbency. Made from 100% Indian cotton with strict quality controls.",
       features: [
         "100% Pure Indian Cotton",
@@ -26,7 +26,7 @@ export function Products() {
     },
     {
       title: "Pure Cotton Handkerchiefs",
-      image: "https://images.unsplash.com/photo-1655151865449-7f4a154f84db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb2xkZWQlMjB3aGl0ZSUyMGhhbmRrZXJjaGllZiUyMGNvdHRvbiUyMGZhYnJpYyUyMHRleHRpbGV8ZW58MXx8fHwxNzc1NjI5NzExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://i.pinimg.com/1200x/92/17/4a/92174a6df09ae1137f7cebdac27692c9.jpg",
       description: "Soft, durable handkerchiefs made from 100% pure cotton. Available in various sizes and finishes to meet diverse market requirements with excellent absorbency and comfort. Perfect for retail, corporate gifting, and wholesale distribution.",
       features: [
         "100% Pure Cotton Fabric",
@@ -46,7 +46,7 @@ export function Products() {
     },
     {
       title: "Premium Incense Sticks",
-      image: "https://images.unsplash.com/photo-1682490319533-77f69e486c9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBpbmNlbnNlJTIwc3RpY2tzJTIwYWdhcmJhdHRpJTIwdHJhZGl0aW9uYWwlMjBzcGlyaXR1YWx8ZW58MXx8fHwxNzc1NjI5NzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://i.pinimg.com/1200x/85/bb/6b/85bb6b1a7b4f7f791aead5cac31668fe.jpg",
       description: "Aromatic incense sticks crafted with natural ingredients for a soothing, long-lasting fragrance experience. Perfect for meditation, spiritual practices, and home ambiance. Sourced from traditional Indian manufacturers with decades of expertise.",
       features: [
         "Natural Ingredients",
