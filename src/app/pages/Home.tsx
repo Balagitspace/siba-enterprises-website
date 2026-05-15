@@ -275,7 +275,7 @@ export function Home() {
             
             <div className="relative">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1768796372343-99ed316eb5ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYWN0b3J5JTIwbWFudWZhY3R1cmluZyUyMHF1YWxpdHklMjBjb250cm9sJTIwaW5zcGVjdGlvbnxlbnwxfHx8fDE3NzU2Mjk3MTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://www.textileblog.com/wp-content/uploads/2023/02/Fabric-inspection-and-control.jpg"
                 alt="Quality control"
                 className="rounded-lg shadow-xl"
               />
