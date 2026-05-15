@@ -12,14 +12,39 @@ export function Contact() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [submissionError, setSubmissionError] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    // Let Netlify handle the form submission
-    setSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmissionError(null);
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/sibaexports07@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            country: formData.country,
+            product: formData.product,
+            message: formData.message,
+            _subject: "New Quote Request from Siba Enterprises Website",
+            _captcha: "false",
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Unable to send message. Please try again.");
+      }
+
+      setSubmitted(true);
       setFormData({
         name: "",
         email: "",
@@ -27,7 +52,14 @@ export function Contact() {
         product: "",
         message: "",
       });
-    }, 3000);
+    } catch (error) {
+      setSubmissionError(
+        error instanceof Error ? error.message : "Something went wrong."
+      );
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitted(false), 5000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -147,18 +179,14 @@ export function Contact() {
                     <p className="text-sm">We'll get back to you within 24 hours.</p>
                   </div>
                 ) : (
-                  <form 
-                    name="contact" 
-                    method="POST" 
-                    data-netlify="true" 
-                    data-netlify-honeypot="bot-field"
-                    onSubmit={handleSubmit} 
-                    className="space-y-6"
-                  >
-                    <input type="hidden" name="form-name" value="contact" />
-                    <div style={{display: 'none'}}>
-                      <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                    </div>
+                  <form onSubmit={handleSubmit} className="space-y-6" aria-busy={isSubmitting}>
+                    {submissionError ? (
+                      <div className="bg-rose-50 border border-rose-200 text-rose-800 px-6 py-4 rounded-lg">
+                        <p className="font-semibold mb-1">Something went wrong.</p>
+                        <p className="text-sm">{submissionError}</p>
+                      </div>
+                    ) : null}
+
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
@@ -250,10 +278,11 @@ export function Contact() {
 
                     <button
                       type="submit"
-                      className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[#8B3A4A] to-[#7A3040] text-white rounded-lg hover:from-[#7A3040] hover:to-[#6A2836] transition-all shadow-md hover:shadow-lg font-semibold"
+                      disabled={isSubmitting}
+                      className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[#8B3A4A] to-[#7A3040] text-white rounded-lg hover:from-[#7A3040] hover:to-[#6A2836] transition-all shadow-md hover:shadow-lg font-semibold disabled:opacity-70 disabled:cursor-not-allowed"
                     >
                       <Send className="w-5 h-5" />
-                      Send Message
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </button>
 
                     <p className="text-sm text-slate-500 text-center">
