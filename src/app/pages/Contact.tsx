@@ -20,17 +20,6 @@ export function Contact() {
     }
   }, []);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    setSubmitted(true);
-    setFormData({
-      name: "",
-      email: "",
-      country: "",
-      product: "",
-      message: "",
-    });
-  };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -149,13 +138,21 @@ export function Contact() {
                   </div>
                 ) : (
                   <form
-                    action="https://formsubmit.co/sibaexports07@gmail.com"
+                    name="contact"
                     method="POST"
+                    action="/contact?success=true"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
                     className="space-y-6"
                   >
+                    <input type="hidden" name="form-name" value="contact" />
                     <input type="hidden" name="_subject" value="New Quote Request from Siba Enterprises Website" />
                     <input type="hidden" name="_captcha" value="false" />
-                    <input type="hidden" name="_next" value="https://sibaenterprises.netlify.app/contact?success=true" />
+                    <div style={{ display: "none" }}>
+                      <label>
+                        Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
+                      </label>
+                    </div>
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">

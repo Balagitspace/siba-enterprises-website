@@ -10,6 +10,17 @@
     </head>
 
     <body>
+      <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="_subject" value="New Quote Request from Siba Enterprises Website" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="bot-field" />
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="country" />
+        <input type="text" name="product" />
+        <textarea name="message"></textarea>
+      </form>
       <div id="root"></div>
       <script type="module" src="/src/main.tsx"></script>
     </body>
