@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
@@ -12,54 +12,23 @@ export function Contact() {
   });
 
   const [submitted, setSubmitted] = useState(false);
-  const [submissionError, setSubmissionError] = useState<string | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmissionError(null);
-
-    try {
-      const response = await fetch(
-        "https://formsubmit.co/ajax/sibaexports07@gmail.com",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            country: formData.country,
-            product: formData.product,
-            message: formData.message,
-            _subject: "New Quote Request from Siba Enterprises Website",
-            _captcha: "false",
-          }),
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Unable to send message. Please try again.");
-      }
-
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("success") === "true") {
       setSubmitted(true);
-      setFormData({
-        name: "",
-        email: "",
-        country: "",
-        product: "",
-        message: "",
-      });
-    } catch (error) {
-      setSubmissionError(
-        error instanceof Error ? error.message : "Something went wrong."
-      );
-    } finally {
-      setIsSubmitting(false);
-      setTimeout(() => setSubmitted(false), 5000);
     }
+  }, []);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    setSubmitted(true);
+    setFormData({
+      name: "",
+      email: "",
+      country: "",
+      product: "",
+      message: "",
+    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -179,14 +148,14 @@ export function Contact() {
                     <p className="text-sm">We'll get back to you within 24 hours.</p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6" aria-busy={isSubmitting}>
-                    {submissionError ? (
-                      <div className="bg-rose-50 border border-rose-200 text-rose-800 px-6 py-4 rounded-lg">
-                        <p className="font-semibold mb-1">Something went wrong.</p>
-                        <p className="text-sm">{submissionError}</p>
-                      </div>
-                    ) : null}
-
+                  <form
+                    action="https://formsubmit.co/sibaexports07@gmail.com"
+                    method="POST"
+                    className="space-y-6"
+                  >
+                    <input type="hidden" name="_subject" value="New Quote Request from Siba Enterprises Website" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_next" value="https://sibaenterprises.netlify.app/contact?success=true" />
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
@@ -278,11 +247,10 @@ export function Contact() {
 
                     <button
                       type="submit"
-                      disabled={isSubmitting}
-                      className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[#8B3A4A] to-[#7A3040] text-white rounded-lg hover:from-[#7A3040] hover:to-[#6A2836] transition-all shadow-md hover:shadow-lg font-semibold disabled:opacity-70 disabled:cursor-not-allowed"
+                      className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[#8B3A4A] to-[#7A3040] text-white rounded-lg hover:from-[#7A3040] hover:to-[#6A2836] transition-all shadow-md hover:shadow-lg font-semibold"
                     >
                       <Send className="w-5 h-5" />
-                      {isSubmitting ? "Sending..." : "Send Message"}
+                      Send Message
                     </button>
 
                     <p className="text-sm text-slate-500 text-center">
