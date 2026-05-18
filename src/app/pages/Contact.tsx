@@ -11,19 +11,36 @@ export function Contact() {
     message: "",
   });
 
-  const [submitted, setSubmitted] = useState(false);
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("success") === "true") {
-      setSubmitted(true);
-    }
-  }, []);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        window.location.href = '/thank-you.html';
+      } else {
+        alert('There was a problem submitting your form. Please try again.');
+      }
+    })
+    .catch(error => {
+      console.error('Form submission error:', error);
+      alert('There was a problem submitting your form. Please try again.');
     });
   };
 
@@ -131,23 +148,16 @@ export function Contact() {
                   Request a Quote
                 </h2>
 
-                {submitted ? (
-                  <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 px-6 py-4 rounded-lg">
-                    <p className="font-semibold mb-1">Thank you for your message!</p>
-                    <p className="text-sm">We'll get back to you within 24 hours.</p>
-                  </div>
-                ) : (
                   <form
                     name="contact"
+                    action="https://formspree.io/f/xkoylyoe"
                     method="POST"
-                    action="/contact?success=true"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
+                    onSubmit={handleSubmit}
                     className="space-y-6"
                   >
-                    <input type="hidden" name="form-name" value="contact" />
                     <input type="hidden" name="_subject" value="New Quote Request from Siba Enterprises Website" />
-                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_replyto" value={formData.email} />
+                    <input type="hidden" name="_redirect" value="false" />
                     <div style={{ display: "none" }}>
                       <label>
                         Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
@@ -254,7 +264,6 @@ export function Contact() {
                       We typically respond within 24 hours during business days
                     </p>
                   </form>
-                )}
               </div>
             </div>
           </div>
